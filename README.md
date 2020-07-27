@@ -1,6 +1,6 @@
 # Group_1-Reproducible-CCBG-pipe
 
-# This is a group 1 mini-project about *Reproducing a published workflow for bacterial genome*
+This is a group 1 mini-project about *Reproducing a published workflow for bacterial genome*
 
 # We are required to:
 - Collaborative on the project using git hub 
