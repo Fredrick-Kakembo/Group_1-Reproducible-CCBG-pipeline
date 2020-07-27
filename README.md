@@ -1,4 +1,4 @@
-# Group_1-Reproducible-CCBG-pipe
+# Group:1-Reproducible-CCBG-pipeline
 
 This is a group 1 mini-project about **Reproducing a published workflow for bacterial genome**
 
