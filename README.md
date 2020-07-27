@@ -16,6 +16,10 @@ This is a group 1 mini-project about **Reproducing a published workflow for bact
    Our first task is to reproduce the analysis as in  the documented study README
 3. Reproduce the analysis workflow used for genome assembly of Oxford Nanopore MinION using Nextflow or Snakemake, and Singularity for containerization.
    Remember as a group we settled on Snamake workflow
+   
+  # Tasks
+  # Task1: Reproduce the analysis using the workflow given in the README file in CCBG_Study directory our repo
+  # Task2: Reproduce the analysis using Snakemake workflow language 
 
 # Question
 In our report, we should address the following question:
