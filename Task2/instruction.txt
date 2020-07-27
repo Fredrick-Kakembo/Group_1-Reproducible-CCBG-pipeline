@@ -1,0 +1,3 @@
+This directory is meant for handling question two for reproducoing the CCBGpipe analysis
+using workflow language. As agreed we will work collaboratively on issue at ago. Snakemake
+is will be our workflow language of choice.

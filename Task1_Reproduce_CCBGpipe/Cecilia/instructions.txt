@@ -1,0 +1,5 @@
+Hi Cecilia,  
+This directory is meant for task one of reproducing the CCBG pipeline using 
+the workflow outlined in the README for CCBGpipe. As we had agreed this     
+is to be done individually then we will discus together
+Document every step of your work.
