@@ -2,7 +2,7 @@
 
 This is a group 1 mini-project about **Reproducing a published workflow for bacterial genome**
 
-# We are required to:
+# We are required to :
 - Collaborative on the project using git hub 
 - Learn from each other and carry out tasks in the event we are assigned any
 - By the end of the project submit a reproducible workflow e.g. in Snakeamke
