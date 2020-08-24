@@ -1,2 +1,4 @@
 We should download the sequence data programmatically using an API
 
+Here is the link for barcode01 *https://drive.google.com/uc?export=download&confirm=TxIT&id=1e- xYLDEEzi8UqRf30KVTymmHNxr_te7P*
+
