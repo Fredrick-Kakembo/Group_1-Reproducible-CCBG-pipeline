@@ -27,3 +27,6 @@ In our report, we should address the following question:
 1. Are we able to arrive at similar conclusions as those in the paper? Why or why not?
 2. What else can we glean from your re-analysis?
 3. Are the descriptions in the methodology section detailed for reproducibility? If not, what could we have done to improve reproducibility?
+
+# Data availability:
+[Here is the link for barcode01](https://drive.google.com/uc?export=download&confirm=TxIT&id=1e- xYLDEEzi8UqRf30KVTymmHNxr_te7P)
