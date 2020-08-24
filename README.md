@@ -29,4 +29,4 @@ In our report, we should address the following question:
 3. Are the descriptions in the methodology section detailed for reproducibility? If not, what could we have done to improve reproducibility?
 
 # Data availability:
-[Here is the link for barcode01]:(https://drive.google.com/uc?export=download&confirm=TxIT&id=1e- xYLDEEzi8UqRf30KVTymmHNxr_te7P)
+[Here is the link for barcode01]:(https://drive.google.com/uc?export=download&confirm=TxIT&id=1e-xYLDEEzi8UqRf30KVTymmHNxr_te7P)
