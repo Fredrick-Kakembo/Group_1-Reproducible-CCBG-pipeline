@@ -37,12 +37,63 @@ This was meant to reproduce the CCBGpipe workflow as done by the authors.
 ### Building a docker image
 To make our own copy of the CCBG pipeline we clone the CCBGpipe repo as given by the authors:
 
-git clone https://github.com/jade-nhri/CCBGpipe.git
+``git clone https://github.com/jade-nhri/CCBGpipe.git``
 
-cd CCBGpipe
+``cd CCBGpipe``
 
-docker build -t "ccbgpipe:v1" ./
-
-docker run -h ccbgpipe --name ccbgpipe -t -i -v /:/MyData ccbgpipe:v1 /bin/bash
 Using the given docker file we built docker image for reproduction of the analysis
+
+``docker build -t "ccbgpipe:v1" ./``
+
+``docker run -h ccbgpipe --name ccbgpipe -t -i -v /:/MyData ccbgpipe:v1 /bin/bash``
+
+   ``Inside the docker: root@ccbgpipe:/# 
+   To install java:
+       apt-get update
+       apt-get install -y software-properties-common
+       add-apt-repository ppa:webupd8team/java
+       apt-get update && apt-get install oracle-java8-installer
+
+   Please note: the Oracle JDK license has changed starting April 16, 2019.
+   You can download zulu to include Java (https://www.azul.com/downloads/zulu/).
+       apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
+       apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
+       echo 'deb http://repos.azulsystems.com/debian stable main' > /etc/apt/sources.list.d/zulu.list
+       apt-get update
+       apt-get install zulu-8``
+### Usage
+#### Basecalling with Guppy instead of Albacore
+
+- Installation of Albacore failed we therefore opted to basecall with Guppy
+
+- To extract fastq files using guppy_bascaller
+
+``guppy_basecaller -i path-to-raw_reads -s outpath (e.g., guppy_basecaller -i Fast5 -s guppy_out)``
+
+- To de-multiplex
+
+``guppy_barcoder -i inpath -s outpath (e.g., guppy_barcoder -i guppy_out -s barcoding)``
+
+- To produce read_id list and joinedreads.fastq for each barcode
+
+``preprocess.py -b path-to-barcoding_summary.txt -s path-to-sequencing_summary.txt -o outpath (e.g., preprocess.py -b barcoding/barcoding_summay.txt -s guppy_out/sequencing_summary.txt -o outdir)``
+
+- With the data produced by the above process, you can perform CCBGpipe by beginning with creating a Run folder
+
+``mkdir Run && cd Run``
+
+``runGetFastq.py path-to-fast5 (e.g., runGetFastq.py ../outdir/)``
+
+``runmini.py``
+
+``runAssembly.py``
+
+``runConsensus.py path-to-fast5 (e.g., runConsensus.py ../fast5/)``
+
+``finalize.py outpath (e.g., finalize.py ../results)``
+
+
+
+
+
 
