@@ -47,20 +47,21 @@ Using the given docker file we built docker image for reproduction of the analys
 
 ``docker run -h ccbgpipe --name ccbgpipe -t -i -v /:/MyData ccbgpipe:v1 /bin/bash``
 
-   ``Inside the docker: root@ccbgpipe:/# 
-   To install java:
-       apt-get update
-       apt-get install -y software-properties-common
-       add-apt-repository ppa:webupd8team/java
-       apt-get update && apt-get install oracle-java8-installer
+   Inside the docker: root@ccbgpipe:/# 
+    To install java:
+        apt-get update
+        apt-get install -y software-properties-common
+        add-apt-repository ppa:webupd8team/java
+        apt-get update && apt-get install oracle-java8-installer
 
-   Please note: the Oracle JDK license has changed starting April 16, 2019.
-   You can download zulu to include Java (https://www.azul.com/downloads/zulu/).
-       apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
-       apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
-       echo 'deb http://repos.azulsystems.com/debian stable main' > /etc/apt/sources.list.d/zulu.list
-       apt-get update
-       apt-get install zulu-8``
+    Please note: the Oracle JDK license has changed starting April 16, 2019.
+    You can download zulu to include Java (https://www.azul.com/downloads/zulu/).
+        apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
+        apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
+        echo 'deb http://repos.azulsystems.com/debian stable main' > /etc/apt/sources.list.d/zulu.list
+        apt-get update
+        apt-get install zulu-8
+        
 ### Usage
 #### Basecalling with Guppy instead of Albacore
 
