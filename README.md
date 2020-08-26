@@ -30,3 +30,19 @@ In our report, we should address the following question:
 
 # Data availability:
 Since the data for the 12 barcodes is too large. For reproducibility, [here is the link for barcode01](https://drive.google.com/uc?export=download&confirm=TxIT&id=1e-xYLDEEzi8UqRf30KVTymmHNxr_te7P)
+
+# Task 1 implementation
+## CCBG pipeline
+This was meant to reproduce the CCBGpipe workflow as done by the authors.
+### Building a docker image
+To make our own copy of the CCBG pipeline we clone the CCBGpipe repo as given by the authors:
+
+git clone https://github.com/jade-nhri/CCBGpipe.git
+
+cd CCBGpipe
+
+docker build -t "ccbgpipe:v1" ./
+
+docker run -h ccbgpipe --name ccbgpipe -t -i -v /:/MyData ccbgpipe:v1 /bin/bash
+Using the given docker file we built docker image for reproduction of the analysis
+
