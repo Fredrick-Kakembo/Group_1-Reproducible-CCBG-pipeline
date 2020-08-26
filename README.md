@@ -47,7 +47,7 @@ Using the given docker file we built docker image for reproduction of the analys
 
 ``docker run -h ccbgpipe --name ccbgpipe -t -i -v /:/MyData ccbgpipe:v1 /bin/bash``
 
-   Inside the docker: root@ccbgpipe:/# 
+    Inside the docker: root@ccbgpipe:/# 
     To install java:
         apt-get update
         apt-get install -y software-properties-common
@@ -61,6 +61,7 @@ Using the given docker file we built docker image for reproduction of the analys
         echo 'deb http://repos.azulsystems.com/debian stable main' > /etc/apt/sources.list.d/zulu.list
         apt-get update
         apt-get install zulu-8
+        
         
 ### Usage
 #### Basecalling with Guppy instead of Albacore
