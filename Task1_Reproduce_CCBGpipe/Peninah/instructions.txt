@@ -1,8 +1,7 @@
 Hi Peninah,  
 This directory is meant for task one of reproducing the CCBG pipeline using 
 the workflow outlined in the README for CCBGpipe. As we had agreed this     
-is to be done individually then we will discuss together
-Document every step of your work.
+is to be done individually then we will discuss together every step of your work.
 
 
 
