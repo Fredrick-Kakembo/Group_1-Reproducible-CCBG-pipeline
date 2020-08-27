@@ -1,3 +1,13 @@
+# Introduction 
+In the past few years, long-read sequencing technologies have been developed by Pacific Biosciences (PacBio) and Oxford Nanopore Technologies (ONT) 
+(Ameur et al., 2018). PacBio and ONT technologies can generate long reads in tens of kilobase pairs, thus making it possible to obtain a complete assembly.
+Compared with the PacBio technology, the ONT MinION is affordable and portable and enables real- time analysis, which render it more attractive for in-field and   clinical deployment. 
+
+The applications of the ONT MinION range from microbial genome assembly to cancer variant discovery and transcript isoform identification.
+Other studies combined both illumina generated short reads and MinION generated long-reads to assembly circular bacterial genomes. However, in the absence of    short reads, MinION long-reads alone can be used to generate complete circular genomes in a rapid and cost-effective manner. Generating a complete circular bacterial genome is essential especially in monitoring and surveillance of antimicrobial resistance transmission. 
+
+Nanopore data analyses requires many bioinformatics tools to be implemented in the genome assembly pipeline. It is important to deploy the required tools in a docker image for one stop analysis for the reconstruction of a circular bacterial genome using MinION data.
+
 # Group:1-Reproducible-CCBG-pipeline
 
 This is a group 1 mini-project about **Reproducing a published workflow for bacterial genome**
@@ -97,6 +107,16 @@ Using the given docker file we built docker image for reproduction of the analys
 ### Schematic representation of the workflow 
  
  ![](https://www.frontiersin.org/files/Articles/469879/fmicb-10-02068-HTML/image_m/fmicb-10-02068-g001.jpg)
+ 
+
+# Task 2 implementation
+
+We were able to make a ``snakemake pipeline`` up to the preprocess step. 
+
+See the snakefile for the same in the task 2 directory.
+
+We were not able to incorporate the subsequent steps (sorting based on long-length reads, quality, assembly) in the snakefile because these steps includes multiple dependent python scripts and due to time constraints were unable to compile these scripts into modules.
+
 
 
 
