@@ -1,11 +1,9 @@
-#import os, sys
-
 rule all:
-    input:"guppy_out/","barcoding/","outdir/","readsB.fastq","readsA.fastq","reads.fastq"
+    input:"guppy_out/","barcoding/","outdir/"
 
 rule guppy_basecall:
     input:
-	"data/20171018_0110_20171016/fast5/0/" # for
+	"data/20171018_0110_20171016/fast5/0/" 
     output:
 	"guppy_out/"
     params: cl="FLO-MIN107",kt="SQK-LSK108"
@@ -15,9 +13,9 @@ rule guppy_basecall:
 
 rule guppy_barcoding:
     input:
-	"guppy_out/" ## output for guppy_basecall rule
+	"guppy_out/" 
     output:
-	"barcoding/" ##
+	"barcoding/" 
  shell:
 	"guppy_barcoder -i {input} -s {output}"
 
@@ -29,16 +27,5 @@ rule preprocess:
     output:
 	   "outdir/"
     shell:
-	   "python preprocess.py -b {input.bc} -s {input.ss} -o {output}" ##
+	   "python preprocess.py -b {input.bc} -s {input.ss} -o {output}"
 
-rule runGetFastq:
-    input:
-        "outdir/"
-    output:
-        "readsA.fastq",
-        "readsB.fastq",
-        "reads.fastq"
-    conda:
-       "environment.yaml"
-    shell:
-        "minimap2 -x ava-ont -t32 {input} | miniasm -f {output}"
