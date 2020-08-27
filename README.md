@@ -2,7 +2,7 @@
 
 This is a group 1 mini-project about **Reproducing a published workflow for bacterial genome**
 
-# We are required to :
+## We are required to :
 - Collaborative on the project using git hub 
 - Learn from each other and carry out tasks in the event we are assigned any
 - By the end of the project submit a reproducible workflow e.g. in Snakeamke
@@ -10,7 +10,7 @@ This is a group 1 mini-project about **Reproducing a published workflow for bact
 - Use visualizations
 - Write a report about the mini project
 
-# Specifically to our mini project we are required to:
+## Specifically to our mini project we are required to:
 1. Download the sequence data programmatically using an API
 2. The project uses CCBGpipe implemented in Python is available and packaged in Docker for reproducibility. 
    Our first task is to reproduce the analysis as in  the documented study README
@@ -18,8 +18,8 @@ This is a group 1 mini-project about **Reproducing a published workflow for bact
    Remember as a group we settled on Snamake workflow
    
   # Tasks
-  # Task1: Reproduce the analysis using the workflow given in the README file in CCBG_Study directory our repo
-  # Task2: Reproduce the analysis using Snakemake workflow language 
+  ### Task1: Reproduce the analysis using the workflow given in the README file in CCBG_Study directory our repo
+  ### Task2: Reproduce the analysis using Snakemake workflow language 
 
 # Question
 In our report, we should address the following question:
