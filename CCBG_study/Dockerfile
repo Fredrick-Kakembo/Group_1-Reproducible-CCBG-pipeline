@@ -1,4 +1,5 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
     wget dos2unix \
@@ -20,6 +21,11 @@ RUN chmod +x *.py
 #albacore 2.1.7
 #This software requires the user to download manually!!!
 
+#guppy-cpu_3.0.3 instead of albacore
+WORKDIR /opt
+RUN wget https://mirror.oxfordnanoportal.com/software/analysis/ont-guppy-cpu_3.0.3_linux64.tar.gz
+RUN tar -xf ont-guppy-cpu_3.0.3_linux64.tar.gz
+WORKDIR /
 
 #samtools 1.7
 ADD https://github.com/samtools/samtools/releases/download/1.7/samtools-1.7.tar.bz2 /opt
@@ -71,6 +77,7 @@ WORKDIR /
 
 #Minimap2, miniasm-0.2
 WORKDIR /opt
+RUN apt-get install -y curl
 RUN curl -L https://github.com/lh3/minimap2/releases/download/v2.10/minimap2-2.10_x64-linux.tar.bz2  | tar -jxvf -
 RUN wget https://github.com/lh3/miniasm/archive/v0.2.tar.gz \
     && tar -xzf v0.2.tar.gz \
