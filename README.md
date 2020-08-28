@@ -1,12 +1,3 @@
-# Group members
-1. Baker	   Lwasampijja
-2. Cecilia	Katunge
-3. Evans 	Mudibo
-4. Herbert 	Agasi
-5. Maria	   Magdalene  Namaganda
-6. Peninah	Tumuhimbise
-7. Peter	   Muchina
-
 # Introduction 
 In the past few years, long-read sequencing technologies have been developed by Pacific Biosciences (PacBio) and Oxford Nanopore Technologies (ONT) 
 (Ameur et al., 2018). PacBio and ONT technologies can generate long reads in tens of kilobase pairs, thus making it possible to obtain a complete assembly.
